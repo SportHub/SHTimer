@@ -13,6 +13,7 @@
 		8B87A8FE1A59E2570032D5EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B87A8FD1A59E2570032D5EF /* Images.xcassets */; };
 		8B87A9011A59E2570032D5EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B87A8FF1A59E2570032D5EF /* LaunchScreen.xib */; };
 		8B87A90D1A59E2570032D5EF /* SHTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B87A90C1A59E2570032D5EF /* SHTimerTests.swift */; };
+		8B87A9181A59E2870032D5EF /* SHTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B87A9171A59E2870032D5EF /* SHTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		8B87A9061A59E2570032D5EF /* SHTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B87A90B1A59E2570032D5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B87A90C1A59E2570032D5EF /* SHTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHTimerTests.swift; sourceTree = "<group>"; };
+		8B87A9171A59E2870032D5EF /* SHTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				8B87A8FA1A59E2570032D5EF /* Main.storyboard */,
 				8B87A8FD1A59E2570032D5EF /* Images.xcassets */,
 				8B87A8FF1A59E2570032D5EF /* LaunchScreen.xib */,
+				8B87A9161A59E2720032D5EF /* SHTimer */,
 				8B87A8F41A59E2570032D5EF /* Supporting Files */,
 			);
 			path = SHTimer;
@@ -110,6 +113,14 @@
 				8B87A90B1A59E2570032D5EF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B87A9161A59E2720032D5EF /* SHTimer */ = {
+			isa = PBXGroup;
+			children = (
+				8B87A9171A59E2870032D5EF /* SHTimer.swift */,
+			);
+			path = SHTimer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B87A8F91A59E2570032D5EF /* ViewController.swift in Sources */,
+				8B87A9181A59E2870032D5EF /* SHTimer.swift in Sources */,
 				8B87A8F71A59E2570032D5EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
