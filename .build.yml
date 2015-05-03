@@ -1,0 +1,23 @@
+default: &DEFAULTS
+  app: &APP_DEFAULTS
+    workspace: SHTimer.xcworkspace
+    scheme: SHTimer
+    configuration: Release
+    display_name: '"SHTimer"'
+    bundle_identifier: io.sporthub.shtimer.pod
+    version: 0.0.4
+    environment_plist: ci/Resources/Environment.plist
+  archive:
+    directory: target
+    base_name: SHTimer
+  simulator:
+    sdk: iphonesimulator
+    destinations: 
+    - '-destination "platform=iOS Simulator,name=iPhone 6,OS=8.3"'
+    - '-destination "platform=iOS Simulator,name=iPhone 6,OS=8.2"'
+    - '-destination "platform=iOS Simulator,name=iPhone 6,OS=8.1"'
+  codesign: &CODESIGN_DEFAULTS
+    signing_identity: '"iPhone Developer: Tom Bates (LS33WJWN4P)"'
+    provisioning_profile: "XC:*"
+  profiles:
+    directory: provisioning

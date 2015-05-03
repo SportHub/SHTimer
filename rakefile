@@ -1,0 +1,21 @@
+require 'rake'
+require 'iosa'
+
+namespace :project do
+
+	task :build do
+	  IOSA.build.build
+	end
+
+	task :test do
+	  IOSA.build.test
+	end
+end
+
+namespace :spec do
+
+	desc 'lint the pod'
+	task :lint do
+	  IOSA.cocoapods.lint_spec('git@bitbucket.org:sporthub/specs.git')
+	end
+end
