@@ -2,5 +2,6 @@ source "https://rubygems.org"
 
 gem 'cocoapods', "~> 0.36.4"
 gem 'xcpretty'
+gem 'rake'
 # gem 'iosa', :path => "~/Code/sport_hub/iosa_gem"
 gem 'iosa', :git => 'git@bitbucket.org:sporthub/iosa.git', :tag => '0.0.2'
