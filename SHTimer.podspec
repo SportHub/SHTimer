@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SHTimer"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "SHTimer"
 
   s.homepage     = "https://bitbucket.org/sporthub/shtimer.git"
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     LICENSE
   }
 
-  s.source       = { :git => "https://bitbucket.org/sporthub/shtimer.git", :tag => "0.0.4" }
+  s.source       = { :git => "git@bitbucket.org:sporthub/shtimer.git", :tag => s.version.to_s }
 
   s.source_files = 'SHTimer/SHTimer/**/*.{swift,h,m}'
 
