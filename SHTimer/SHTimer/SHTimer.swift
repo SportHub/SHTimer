@@ -10,14 +10,14 @@ public class SHTimer {
   
   public class func start(duration: Float,
                           repeats: Bool = false,
-                          block: FireBlock) -> SHTimer {
+                          block: @escaping FireBlock) -> SHTimer {
     let timer = SHTimer(fireBlock: block)
     timer.start(duration: duration,
                 repeats: repeats)
     return timer
   }
   
-  private init(fireBlock :FireBlock)  {
+  private init(fireBlock :@escaping FireBlock)  {
     self.fireBlock = fireBlock
   }
   
