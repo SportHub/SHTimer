@@ -1,35 +1,40 @@
+import Foundation
 import UIKit
 
 public typealias FireBlock = (() -> Void)
 
-public class SHTimer: NSObject {
+public class SHTimer {
   
-  var timer :NSTimer!
-  var fireBlock :FireBlock!
+  private var timer: Timer!
+  private var fireBlock: FireBlock!
   
-  public class func startTimeWithDurtion (duration :Float, repeats :Bool, fireBlock :FireBlock) -> SHTimer {
-    let timer = SHTimer(fireBlock: fireBlock)
-    timer.startTimeWithDurtion(duration, repeats: repeats)
+  public class func start(duration: Float,
+                          repeats: Bool = false,
+                          block: @escaping FireBlock) -> SHTimer {
+    let timer = SHTimer(fireBlock: block)
+    timer.start(duration: duration,
+                repeats: repeats)
     return timer
   }
   
-  private init(fireBlock :FireBlock)  {
+  private init(fireBlock :@escaping FireBlock)  {
     self.fireBlock = fireBlock
-    super.init()
   }
   
-  private func startTimeWithDurtion(duration :Float, repeats :Bool) {
-    self.timer = NSTimer.scheduledTimerWithTimeInterval(Double(duration), target: self,
-                                                                        selector: Selector("timerFired"),
-                                                                        userInfo: nil,
-                                                                         repeats: repeats)
+  private func start(duration: Float,
+                     repeats: Bool = false) {
+    self.timer = Timer.scheduledTimer(timeInterval: Double(duration),
+                                      target: self,
+                                      selector: #selector(SHTimer.timerFired),
+                                      userInfo: nil,
+                                      repeats: repeats)
   }
   
-  func timerFired() {
+  @objc private func timerFired() {
     self.fireBlock()
   }
   
-  public func stopTimer() {
+  public func stop() {
     if self.isValid {
       self.timer.invalidate()
     }
@@ -37,7 +42,7 @@ public class SHTimer: NSObject {
   
   public var isValid :Bool {
     get{
-      return self.timer.valid
+      return self.timer.isValid
     }
   }
   
