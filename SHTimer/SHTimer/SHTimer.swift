@@ -41,9 +41,7 @@ public class SHTimer {
   }
   
   public var isValid :Bool {
-    get{
-      return self.timer.isValid
-    }
+    return self.timer.isValid
   }
   
 }
