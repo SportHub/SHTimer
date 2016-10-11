@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'SHTimer'
-  s.version      = '0.1.6'
+  s.version      = '0.1.0'
   s.summary      = 'SHTimer'
 
   s.homepage     = 'https://bitbucket.org/sporthub/shtimer.git'
