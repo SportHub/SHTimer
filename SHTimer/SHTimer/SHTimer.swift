@@ -40,8 +40,8 @@ public class SHTimer {
     }
   }
   
-  public var isValid :Bool {
-    return self.timer.isValid
+  public var isValid: Bool {
+      return self.timer.isValid
   }
   
 }
